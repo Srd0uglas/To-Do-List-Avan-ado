@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: helvetica;
+    color: #333;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(Imagem-De-Fundo.jpg);
+    background-position: center ;   /* centralizar a foto  */
+    background-size: cover; /* se adequa a tela do usuário */
+}
+/* estilização de TODOS os botões */
+button{
+    background-color: #FDFDFD;
+    color: #102f5e;
+    border: 2px solid #102f5e;
+    padding: 0.3rem 0.6rem;
+    font-size: 1rem;
+    cursor: pointer; /* cursor pointer é para aparecer aquela mãozinha */
+    display: flex; /* deixou os botões um embaixo do outro */
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+/* Fazer com que quando o mouse for passado por cima, mude a cor >>> */
+/* quando o mouse for passado em cima a cor de fundo do botão vai ser azul e o conteúdo dele vai ser branco */
+button:hover{
+    background-color: #102f5e;
+    color: #fff;
+}
+/* quando o mouse passar o ícone vai ficar branco >>> */
+button:hover>i{
+    color: #fff;;
+}
+button i {
+    color: #102f5e;
+    font-weight: bold; /* negrito */
+    pointer-events: none; /* quando clicar no ícone o botão vai funcionar  */
+}
+
+input, select{
+    padding: 0.25rem 0.5rem; /* espaçamento entre a caixa de texto e o botão */
+}
+
+.hide{
+    display: none;
+}
+
+/* estilização do Todo-Header */
+/* peguei a div mão que guaradava todos os elementos e irei estilizar */
+.todo-container{
+    max-width: 450px;
+    /* margin: 3rem auto; */
+    margin: 3rem auto; /* centralizar a div ao meio */
+    background-color: #FDFDFD;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+.todo-container header{
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+/* estilização do todo-form */
+#todo-form, #edit-form{
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+#todo-form p,
+#edit-form p {
+margin-bottom: 0.5rem;
+font-weight: bold;
+}
+
+.form-control{
+    display: flex; /* deixou os botões um ao lado do outro */
+}
+
+.form-control input{
+    margin-right: 0.3rem; /* afastar o botão da caiuxa de texto */
+}
+#cance-edit-btn{
+    margin-top: 1rem;   
+}
+
+/* todo toolbar */
+
+#toolbar{
+    border-bottom: 1px solid #ccc;
+    padding: 1rem; /* espaçamento cima/baixo-lados */
+    display: flex; /* deixou tudo um ao lado do outro */
+}
+#toobar h4{
+    margin-bottom: 0.5rem;
+}
+#search{
+    /* estilização da borda que fica em pé */
+    border-right: 1px solid #ddd; /* essa é a borda que fica em pé  */
+    padding-right: 1rem;
+    margin-right: 1rem;
+    /* fim da estilização da borda */
+    width: 65%;
+    display: flex;
+    /* texto em cima e a caixa de texto embaixo */
+    flex-direction: column; 
+}
+#search form{
+    /* Deixou o botão e a caixa de texto um ao lado do outro */
+    display: flex;
+}
+#search input{
+    width: 100%;
+    margin-right: 0.3rem;
+}
+#filter{
+    width: 35%;
+    display: flex;
+    /* pesquisar em cima e a caixa de texto embaixo */
+    flex-direction: column;
+}
+.todo{
+    display: flex;
+    /* para colocar o título ao lado dos botões colocaremos essa propriedade */
+    justify-content: space-around;
+    /* alinhar na vertical */
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.todo h3{
+    /* ocupar toda a largura possivel e deixar somente o espaço dos botões */
+    flex: 3;
+    font-size: 0.9rem;
+}
+.todo button{
+    /* afastar os botões */
+    margin-left: 0.4rem;
+}
+
+.done{
+    background-color: #395169;
+}
+.done h3{
+    color: #fff;
+}
+ h4{
+    padding: 0 0 10px;
+}
