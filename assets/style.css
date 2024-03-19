@@ -9,6 +9,7 @@ body{
     background-image: url(Imagem-De-Fundo.jpg);
     background-position: center ;   /* centralizar a foto  */
     background-size: cover; /* se adequa a tela do usuário */
+    background-attachment:fixed;
 }
 /* estilização de TODOS os botões */
 button{
